@@ -1,0 +1,100 @@
+.imitation-write-wrapper { padding: 1rem; max-width: 800px; margin: auto; overflow: hidden; }
+.imitation-article { margin-bottom: 1rem; display: flex; flex-direction: column; }
+.imitation-form label { font-weight: bold; margin-bottom: 0.25rem; }
+.imitation-form input[type="text"], .estimate-form textarea { padding: 0.5rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 4px; height: 50px; }
+.imitation-form textarea { min-height: 80px; resize: vertical; }
+
+/* 이미지 파일 첨부 */
+.imitation-file-upload-group { display: flex; flex-direction: row; gap: 12px; flex-wrap: wrap; justify-content: space-between; padding: 20px 0; }
+.imitation-file-upload-wrapper { flex: 1; min-width: 140px; }
+.imitation-file-label { display: inline-block; width: 100%; padding: 12px 24px; background-color: #dd3333; color: white; border-radius: 6px; font-size: 16px; cursor: pointer; text-align: center; transition: background-color 0.3s ease; }
+.imitation-file-label.uploaded { background-color: #28a745; }
+.imitation-file-label:hover { background-color: #d40000; }
+.imitation-file-input { display: none; }
+
+@media (max-width: 992px) {
+  .file-upload-group { flex-direction: column; }
+}
+
+/* 정품 보증서 양식 디자인 */
+.imitation-output-capture {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: left;
+  width: 800px;
+  padding: 1rem 1rem 1rem 1rem;
+  overflow: hidden;
+}
+.imitation-a4-image {
+  position: relative;
+  width: 794px;
+  height: 1123px;
+  background-image: url('../../static/img/estimate_imitation-back.png'); 
+  background-size: cover; /* 또는 contain */
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-color: #e0f0ff; */
+  /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.15); */
+}
+
+.estimate-watermark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* object-fit: contain; */
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* 텍스트 위치 조정 */
+.product-name { top: 80px; left: 100px; }
+.serial-number { top: 120px; left: 100px; }
+.notes { top: 160px; left: 100px; white-space: pre-wrap; max-width: 600px; }
+.appraisal-number { top: 200px; left: 100px; }
+
+.image-frame { position: absolute; background: #fff; border: 1px solid #ccc; overflow: hidden; text-align: center; vertical-align: middle; }
+
+.image-frame.image-1 { width: 420px; height: auto; max-height: 320px; min-height: 320px; top: 210px; left: 50%; padding: 5px; /* transform: translateX(-50%); */ margin-left: -210px; }
+.image-frame.image-2 { width: 98px; height: auto; max-height: 97px; min-height: 97px; top: 542px; left: 29.2%; /* transform: translateX(-50%); */ margin-left: -49px; padding: 2px; }
+.image-frame.image-3 { width: 97px; height: auto; max-height: 97px; min-height: 97px; top: 542px; left: 43%; /* transform: translateX(-50%); */ margin-left: -49px; padding: 2px; }
+.image-frame.image-4 { width: 97px; height: auto; max-height: 97px; min-height: 97px; top: 542px; left: 57.3%; /* transform: translateX(-50%); */ margin-left: -49px; padding: 2px; }
+.image-frame.image-5 { width: 97px; height: auto; max-height: 97px; min-height: 97px; top: 542px; left: 71%; /* transform: translateX(-50%); */ margin-left: -49px; padding: 2px; }
+
+.attached-image { width: 100%; height: 100%; object-fit: contain; }
+.attached-image.image-1 { width: 310px; height: auto; }
+.attached-image.image-2 { width: 90px; height: auto; max-height: 90px;}
+.attached-image.image-3 { width: 90px; height: auto; max-height: 90px;}
+.attached-image.image-4 { width: 90px; height: auto; max-height: 90px;}
+.attached-image.image-5 { width: 90px; height: auto; max-height: 90px;}
+
+
+/* 텍스트 그룹 상자 공통 */
+.text-group { position: absolute; width: 420px; display: flex; flex-direction: column; gap: 12px; }
+
+/* 위쪽 텍스트 위치 */
+.upper-text-group { top: 50px; left: 50%; transform: translate(-50%, 80px); }
+
+/* 아래쪽 텍스트 위치 */
+.lower-text-group { top: 590px; left: 50%; transform: translate(-50%, 64px); }
+
+/* 한 줄 텍스트 구성 */
+.text-row { display: flex; align-items: center; gap: 8px; justify-content: space-between; width: 100%; font-size: 16px; }
+
+/* label과 값 스타일 */
+.text-label { font-weight: bold; text-align: left; white-space: nowrap; width: 80px; font-weight: bold; flex-shrink: 0;}
+.text-value { text-align: right; word-break: keep-all; flex: 1; overflow: hidden; font-size: clamp(10px, 2vw, 16px);  /* 글자 수 많아지면 축소 */ word-break: break-word;  /* 단어 내에서도 줄바꿈 허용 */ line-height: 1.4; }
+
+/* 오늘 날짜 */
+.date-row { display: flex; justify-content: center; width: 100%; font-size: 22px; margin-top: 78px; font-weight: 600; }
+
+.imitation-button { margin-top: 1rem; padding: 0.75rem 1.5rem; font-size: 1rem; background-color: #dd3333; color: white; border: none; border-radius: 6px; cursor: pointer; }
+.imitation-button:hover { background-color: #d40000; }
+
+.download-section { margin-top: 1rem; text-align: left; }
+.download-button { display: inline-block; padding: 0.75rem 1.5rem; background-color: #28a745; color: white; border-radius: 6px; font-size: 1rem; font-weight: bold; text-decoration: none; transition: background-color 0.3s ease; }
+.download-button:hover { background-color: #218838; }
+
+.download-pdf-button { display: inline-block; margin-left: 12px; padding: 0.75rem 1.5rem; background-color: #6c63ff; color: white; border: none; border-radius: 6px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease; }
+.download-pdf-button:hover { background-color: #4a44c7; }
